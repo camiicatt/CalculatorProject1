@@ -1,7 +1,7 @@
 <script>
   import bubble from '$lib/assets/bubble2.png';
 
-    let display = $state('0');
+    let display = $state('0.00');
     let firstNumber = 0;
     let startNewNumber = false;
     let array = [];
@@ -21,7 +21,7 @@
 <main>
     <div id="bubble-container">
         <img id="bubble" src={bubble} alt="Bubble" />
-        <div class="number-display">{display}</div>
+        <div class="number-display">${display}</div>
 
         <div class="button-grid">
             <button onclick={() => handleButtonClick(0.01)}>1¢</button>
@@ -65,7 +65,7 @@
 
     background: #ffd6e7;
     color: #84445e;
-    border: 2px solid #fff0f6;
+    border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 10px;
 
     width: 140px;
@@ -77,7 +77,8 @@
     }
     
     :global(body) {
-      margin: 0;
+    margin: 0;
+    font-family: "Avenir Next", "Trebuchet MS", sans-serif;
     }
 
     .button-grid {
@@ -94,22 +95,22 @@
 
     .button-grid button {
   aspect-ratio: 1;
-  background: #ffd6e7;
-  color: #84445e;
-  border: 2px solid #fff0f6;
-  border-radius: 16px;
+  background: rgba(255, 240, 247, 0.8);
+  color: #865b73;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 
-  font-size: 24px;
-  font-weight: 600;
   font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
 
-  box-shadow: 0 4px 8px rgba(132, 68, 94, 0.15);
+  box-shadow: 0 2px 5px rgba(132, 68, 94, 0.08);
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
 
 .button-grid button:hover {
-  background: #ffc2db;
+  background: #ffe5f0;
   transform: translateY(-2px);
 }
 
@@ -140,9 +141,9 @@
     }
 
     #reset-button button {
-    background: #e6a5c0;
+    background: rgba(254, 215, 233, 0.8);
     color: #b2406d;
-    border: 2px solid #fff0f6;
+    border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     padding: 10px 24px;
     font-size: 20px;
